@@ -1,0 +1,6 @@
+- hosts: localhost
+  vars_files:
+    - myhostvars.json
+  tasks:
+    - debug:
+        msg: "{{ myhostvars[inventory_hostname]['ansible_bond0.354']['ipv4']['address'] }}"
